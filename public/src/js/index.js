@@ -21,7 +21,7 @@ $(() => {
         const formData = new FormData(e.target);
 
         $.ajax({
-            url: 'https://wolofacademy.000webhostapp.com/api/mail/subscribe?next_action=download&file_tag=tNDt5ZYIzMxPxIbljJk7',
+            url: 'https://wolofacademy.000webhostapp.com/api/mail/subscribe',
             method: 'POST',
             data: formData,
             processData: false,
