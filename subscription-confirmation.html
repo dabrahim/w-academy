@@ -1,8 +1,9 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en">
     <head>
-        <meta charset="utf-8">
-        <title>Wolof Academy</title>
+        <meta charset="UTF-8">
+        <title>Confirming subscription</title>
+
         <!--favicon-->
         <link rel="apple-touch-icon" sizes="57x57" href="/favicon/apple-icon-57x57.png">
         <link rel="apple-touch-icon" sizes="60x60" href="/favicon/apple-icon-60x60.png">
@@ -42,49 +43,18 @@
 
         <meta name="theme-color" content="#ffffff">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"/>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
+
         <link rel="stylesheet" href="public/dist/css/custom/style.min.css">
-        <link rel="stylesheet" href="public/dist/css/custom/index.min.css">
+        <link rel="stylesheet" href="public/dist/css/custom/subscription-confirmation.min.css">
     </head>
     <body>
         <div id="wrapper">
-            <nav>
-                <span class="title">Wolof Academy</span>
-            </nav>
-            <div id="content">
-                <img src="public/dist/images/book_logo.png" alt="logo">
-                <!--                <img src="public/dist/gif/wolofacademylogo.gif" alt="logo">-->
-                <h1>Wolof academy</h1>
-                <h2>Learn wolof online</h2>
-                <p>Welcome to Wolof Academy the best place to learn Wolof online. The website is currently under
-                    construction however new features will arrive soon. Subscribe now so you won't miss out anything
-                    !</p>
-                <button id="btn-subscribe">Subscribe</button>
-                <!--                <h3>Coming soon !</h3>-->
-            </div>
-            <footer>
-                <a href="https://www.instagram.com/wolofacademy" target="_blank" title="Instagram Page">
-                    <img src="public/dist/icons/instagram_logo_2.png" alt="Instagram Logo">
-                </a>
-            </footer>
+            <h1 id="message">Processing...</h1>
+            <a href="/">
+                <button id="go-home-btn">Go Home</button>
+            </a>
         </div>
-        <div id="layer" class="animate__animated animate__fadeIn">
-
-            <form action="" method="post" id="subscription-form" class="animate__animated animate__fadeInDown">
-                <h1>Subscription</h1>
-                <p>Subscribe and get notified for all activities including new e-books, youtube videos, and more !</p>
-                <div class="success animate__animated animate__fadeIn"></div>
-                <div class="failure animate__animated animate__fadeIn"></div>
-                <input type="text" name="firstname" placeholder="First Name"><br>
-                <input type="text" name="lastname" placeholder="First Name"><br>
-                <input type="email" name="email" placeholder="Email"><br>
-                <button type="submit" id="btn-submit-subscription-form"><span>Subscribe</span> <img src="/public/dist/gif/dual_ring.svg" alt="Loader" class="loader"></button>
-
-                <img src="/public/dist/icons/close-window-48.png" class="close" alt="close icon">
-            </form>
-
-        </div>
-        <script src="public/dist/js/index.bundle.js" type="application/javascript"></script>
+        <script type="application/javascript" src="public/dist/js/subscription-confirmation.bundle.js"></script>
     </body>
 </html>

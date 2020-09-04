@@ -1,0 +1,124 @@
+@import "_colors";
+
+* {
+  font-family: 'Montserrat', sans-serif;
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: auto;
+  background-color: @primaryColor;
+}
+
+.blur {
+  -webkit-filter: blur(5px);
+  -moz-filter: blur(5px);
+  -o-filter: blur(5px);
+  -ms-filter: blur(5px);
+  filter: blur(5px);
+}
+
+#layer {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  align-items: center;
+  justify-content: center;
+  display: none;
+}
+
+#subscription-form {
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.7);
+  width: 80%;
+  min-width: 280px;
+  max-width: 600px;
+  padding: 50px 20px;
+  border-radius: 5px;
+  border: 3px solid white;
+
+  p {
+    margin: 0 0 15px 0;
+    font-size: 17px;
+  }
+
+  h1 {
+    margin: 15px 0 10px 0;
+    color: rgb(212, 90, 90);
+  }
+
+  input {
+    border: none;
+    font-size: 15px;
+    text-align: center;
+    padding: 11px;
+    border-radius: 7px;
+    background-color: rgba(255, 255, 255, 0.5);
+    width: 50%;
+    min-width: 200px;
+    outline: none;
+    margin: 2px 0;
+
+    transition: 0.5s all;
+    -moz-transition: 0.5s all;
+    -webkit-transition: 0.5s all;
+    -o-transition: 0.5s all;
+
+    &:focus {
+      background-color: rgba(255, 255, 255, 0.8);
+    }
+  }
+
+  button {
+    border: none;
+    font-size: 18px;
+    text-align: center;
+    font-weight: bold;
+    padding: 11px;
+    border-radius: 7px;
+    background-color: rgb(212, 90, 90);
+    width: 50%;
+    outline: none;
+    margin-top: 20px;
+    color: white;
+    cursor: pointer;
+    position: relative;
+
+    .loader {
+      display: none;
+      position: absolute;
+      width: 25px;
+      right: 5px;
+      top: 9px;
+    }
+  }
+
+  .close {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    width: 30px;
+    cursor: pointer;
+  }
+
+  .success {
+    color: green;
+    font-weight: bold;
+    padding: 0 0 8px 0;
+    display: none;
+  }
+
+  .failure {
+    color: red;
+    font-weight: bold;
+    padding: 0 0 8px 0;
+    display: none;
+  }
+}
+

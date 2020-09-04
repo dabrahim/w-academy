@@ -1,0 +1,25 @@
+{
+  "name": "wolof-academy",
+  "version": "1.0.0",
+  "description": "Wolof online learning platform",
+  "main": "webpack.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack",
+    "watch": "webpack --watch & less-watch-compiler"
+  },
+  "author": "Ibrahima NDIAYE",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.11.6",
+    "@babel/preset-env": "^7.11.5",
+    "babel-loader": "^8.1.0",
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12"
+  },
+  "dependencies": {
+    "animate.css": "^4.1.0",
+    "jquery": "^3.5.1",
+    "path": "^0.12.7"
+  }
+}
