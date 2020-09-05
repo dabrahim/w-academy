@@ -5,7 +5,11 @@
         <script async src="https://www.googletagmanager.com/gtag/js?id=UA-177286544-1"></script>
         <script>
             window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
+
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+
             gtag('js', new Date());
 
             gtag('config', 'UA-177286544-1');
@@ -63,14 +67,12 @@
             </nav>
             <div id="content">
                 <img src="public/dist/images/book_logo.png" alt="logo">
-                <!--                <img src="public/dist/gif/wolofacademylogo.gif" alt="logo">-->
                 <h1>Wolof Academy</h1>
                 <h2>Learn Wolof online</h2>
                 <p>Welcome to Wolof Academy: the best place to learn Wolof online. The website is currently under
-                    construction however new features will arrive soon. Subscribe <strong>now</strong> if you don't want to miss out anything
-                    !</p>
+                    construction, however, new features will arrive soon. Subscribe <strong>now</strong> if you don't
+                    want to miss out on anything!</p>
                 <button id="btn-subscribe">Subscribe</button>
-                <!--                <h3>Coming soon !</h3>-->
             </div>
             <footer>
                 <a href="https://www.instagram.com/wolofacademy" target="_blank" title="Instagram Page">
@@ -82,13 +84,15 @@
 
             <form action="" method="post" id="subscription-form" class="animate__animated animate__fadeInDown">
                 <h1>Subscription</h1>
-                <p>Leave your email address and be notified of any update such as new e-books, youtube videos, and more !</p>
+                <p>Leave your email address and be notified of any update such as new e-books, youtube videos, and more
+                    !</p>
                 <div class="success animate__animated animate__fadeIn"></div>
                 <div class="failure animate__animated animate__fadeIn"></div>
                 <input type="text" name="firstname" placeholder="First Name"><br>
                 <input type="text" name="lastname" placeholder="First Name"><br>
                 <input type="email" name="email" placeholder="Email"><br>
-                <button type="submit" id="btn-submit-subscription-form"><span>Subscribe</span> <img src="/public/dist/gif/dual_ring.svg" alt="Loader" class="loader"></button>
+                <button type="submit" id="btn-submit-subscription-form"><span>Subscribe</span> <img
+                        src="/public/dist/gif/dual_ring.svg" alt="Loader" class="loader"></button>
 
                 <img src="/public/dist/icons/close-window-48.png" class="close" alt="close icon">
             </form>
