@@ -62,22 +62,84 @@
     </head>
     <body>
         <div id="wrapper">
-            <nav>
-                <span class="title">Wolof Academy</span>
-            </nav>
+
             <div id="content">
-                <img src="public/dist/images/book_logo.png" alt="logo">
-                <h1>Wolof Academy</h1>
-                <h2>Learn Wolof online</h2>
-                <p>Welcome to Wolof Academy: the best place to learn Wolof online. The website is currently under
-                    construction, however, new features will arrive soon. Subscribe <strong>now</strong> if you don't
-                    want to miss out on anything!</p>
-                <button id="btn-subscribe">Subscribe</button>
+                <div id="main-banner">
+                    <div>
+                        <nav>
+                            <button class="btn-subscribe">Subscribe</button>
+                        </nav>
+
+                        <img src="public/dist/images/book_logo.png" alt="logo" class="logo">
+                        <h1>Wolof Academy</h1>
+                        <h2>Learn Wolof online</h2>
+                        <!--<p>Welcome to the Wolof Academy: the best place to learn Wolof online.
+                        </p>-->
+                        <div id="scroll-down-section">
+                            <span>Scroll down to learn more</span>
+                            <img src="public/dist/icons/expand-arrow.png" alt="scroll down">
+                        </div>
+                    </div>
+                    <!--<button id="btn-subscribe">Subscribe</button>-->
+
+                    <!--                    <img src="public/dist/images/home-background.jpg" alt="home background" class="background">-->
+                </div>
+
+                <section id="presentation-section">
+                    <h1>What is Wolof Academy?</h1>
+                    <p>The Wolof Academy is a project launched in August 2020 to provide high-quality resources to
+                        anyone willing to learn Wolof online. We noticed how tedious it was to find intuitive Wolof
+                        courses on the internet so we came up with this idea to solve that problem. We’re continuously
+                        working on the project to provide our community with the best learning experience.</p>
+                    <div class="yellow-line"></div>
+                </section>
+
+                <section id="instagram-section">
+                    <div>
+                        <div class="mockup-section">
+                            <img src="public/dist/images/ig_iphone_mockup.png" alt="instagram page">
+                        </div>
+                        <div class="text-section">
+                            <img src="public/dist/icons/instagram_logo_2.png" alt="IG logo" class="instagram-logo">
+                            <h1>Follow us on Instagram</h1>
+                            <div class="yellow-line"></div>
+                            <p>Our Instagram page is the place where we are currently the <strong>most active</strong>.
+                                We
+                                share valuable content at least <strong>twice a week</strong> and regularly
+                                interact with our
+                                community to gather their
+                                feedback in order to provide them with the best content. <br><br>We also organize
+                                <strong>interactive
+                                    quizzes</strong> through which you can strengthen your knowledge and learn new
+                                concepts
+                                while having
+                                fun.
+                                <br><br>What are you waiting for? Go follow us if you don’t want to miss out on
+                                anything!
+                            </p>
+                            <a href="https://www.instagram.com/wolofacademy" target="_blank">
+                                <button class="go-to-ig-page-btn" title="Visit Instagram Page">Visit Instagram page
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="subscription-section">
+                    <div>
+                        <!--                        <h1>Stay informed</h1>-->
+                        <img src="public/dist/icons/send.png" alt="email">
+                        <!--                        <img src="public/dist/icons/sent_mail.svg" alt="email">-->
+                        <p>Subscribe to our email list and get notified of any update such as new quizzes, new e-books,
+                            new videos, and so on. You can also benefit from early access to all our future releases.
+                        </p>
+                        <button class="btn-subscribe">Subscribe</button>
+                    </div>
+                </section>
+
             </div>
             <footer>
-                <a href="https://www.instagram.com/wolofacademy" target="_blank" title="Instagram Page">
-                    <img src="public/dist/icons/instagram_logo_2.png" alt="Instagram Logo">
-                </a>
+                <span><strong>Wolof Academy®</strong> Copyrights © 2020. All rights reserved.</span>
             </footer>
         </div>
         <div id="layer" class="animate__animated animate__fadeIn">
@@ -99,7 +161,8 @@
 
             <div id="successful-registration-message" class="animate__animated animate__bounceIn">
                 <h1>Check your email</h1>
-                <p>We’ve sent a message to <strong id="recipient-address"></strong> with a link to activate your account.
+                <p>We’ve sent a message to <strong id="recipient-address"></strong> with a link to activate your
+                    account.
                 </p>
                 <p><strong>Didn't get an email?</strong></p>
                 <span>If you don’t see an email from us within a few minutes, a few things could have happened:</span>

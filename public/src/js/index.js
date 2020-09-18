@@ -3,7 +3,7 @@ import $ from 'jquery'
 $(() => {
     const layer_div = $('#layer');
     const wrapper_div = $('#wrapper');
-    const subscribe_btn = $('#btn-subscribe');
+    const subscribe_btn = $('.btn-subscribe');
     const submitForm_btn = $('#btn-submit-subscription-form');
     const subscription_form = $('#subscription-form');
     const close_btn = $('.close');

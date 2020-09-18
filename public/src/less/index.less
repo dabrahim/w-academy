@@ -7,91 +7,313 @@ body {
 
 #wrapper {
   width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
+  background-color: @primaryColor;
 
   #content {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    padding: 20px;
-    flex: 1;
+    width: 100%;
 
-    h1, h2 {
-      margin: 0;
-      color: white;
+    #main-banner {
+      width: 100%;
+      height: 100vh;
+      background: url("/public/dist/images/home-background.jpg");
+      background-size: cover;
+
+      > div {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding: 20px;
+        flex: 1;
+        position: relative;
+        background-color: rgba(212, 90, 90, 0.9);
+
+        nav {
+          height: @navHeight;
+          background-color: @transparentWhiteBg;
+          display: flex;
+          align-items: center;
+          padding: @navPadding;
+          color: white;
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+
+          .title {
+            font-size: 20px;
+            font-weight: bold;
+          }
+
+          button {
+            margin-left: auto;
+            padding: 10px 25px;
+            font-size: 16px;
+            color: white;
+            font-weight: bold;
+            border-radius: 3px;
+            border: none;
+            background-color: rgba(255, 255, 255, 0.2);
+            //.transitionable;
+
+            &:hover {
+              background-color: white;
+              color: @primaryColor;
+            }
+          }
+        }
+
+        h1, h2 {
+          margin: 0;
+          color: white;
+        }
+
+        h1 {
+          margin: 0;
+          font-size: 50px;
+          font-weight: bold;
+          line-height: 0.9;
+        }
+
+        p {
+          color: white;
+          max-width: 840px;
+          margin: 5px;
+        }
+
+        h2 {
+          font-size: 25px;
+          margin-top: 5px;
+        }
+
+        h3 {
+          padding: 10px 15px;
+          background-color: rgba(0, 0, 0, 0.3);
+          display: inline-block;
+          font-size: 20px;
+        }
+
+        #scroll-down-section {
+          width: 100%;
+          bottom: 0;
+          position: absolute;
+
+          span {
+            display: block;
+            color: white;
+            font-size: 13px;
+          }
+
+          img {
+            width: 20px;
+          }
+        }
+
+
+        .logo {
+          width: 200px;
+          height: 200px;
+        }
+
+        #btn-subscribe {
+          .black-btn();
+        }
+      }
     }
 
-    h1 {
-      margin: 0;
-      font-size: 50px;
-      font-weight: bold;
-      line-height: 0.9;
+    #presentation-section {
+      width: 100%;
+      background-color: white;
+      padding: 70px 30px;
+
+      h1 {
+        color: @primaryColor;
+        margin: 0;
+      }
+
+      p {
+        margin: 8px 0 0 0
+      }
+
+      .yellow-line {
+        height: 5px;
+        width: 200px;
+        background-color: @secondaryColor;
+        display: inline-block;
+        margin-top: 40px;
+      }
     }
 
-    p {
-      color: white;
-      max-width: 840px;
+    #instagram-section {
+      width: 100%;
+      //background: url("/public/dist/images/social-media-pattern-2.jpg");
+      background: url("/public/dist/images/social-media-pattern.jpg");
+      background-size: cover;
+
+      > div {
+        width: 100%;
+        padding: 50px 50px;
+        @mockupWidth: 270px;
+        background-color: rgba(212, 90, 90, 0.98);
+
+        .mockup-section {
+          display: inline-block;
+
+          img {
+            width: @mockupWidth;
+          }
+        }
+
+        .text-section {
+          vertical-align: top;
+          width: calc(100% - 40px - @mockupWidth);
+          max-width: 650px;
+          display: inline-block;
+          color: white;
+          text-align: left;
+          padding: 0 0 0 30px;
+
+          .instagram-logo {
+            display: none;
+          }
+
+          h1 {
+            display: block;
+            margin: 0 0 0 0;
+            font-size: 30px;
+            width: 200px;
+            text-align: left;
+          }
+
+          p {
+            margin: 0;
+            font-size: 20px;
+            text-align: justify;
+          }
+
+          .yellow-line {
+            height: 10px;
+            width: 200px;
+            background-color: @secondaryColor;
+            display: inline-block;
+            margin: 10px 0 15px 0;
+          }
+
+          .go-to-ig-page-btn {
+            font-size: 18px;
+            padding: 10px 30px;
+            margin-top: 20px;
+            border: none;
+            font-weight: bold;
+            background-color: @secondaryColor;
+            border-radius: 25px;
+            cursor: pointer;
+            outline: none;
+          }
+        }
+      }
+
+      @media screen and (max-width: 850px) {
+        > div {
+
+          .mockup-section {
+            display: block;
+            width: 100%;
+          }
+
+          .text-section {
+            display: block;
+            width: 100%;
+            padding: 0;
+            text-align: center;
+            max-width: none;
+
+            .instagram-logo {
+              display: inline-block;
+              margin-top: 50px;
+            }
+
+            h1 {
+              width: 100%;
+              text-align: center;
+              margin: 0 0 10px 0;
+            }
+
+            p {
+              text-align: center;
+            }
+          }
+        }
+      }
+
+      @media screen and (max-width: 380px) {
+        > div {
+          padding: 25px;
+        }
+      }
+
+      @media screen and (max-width: 320px) {
+        > div {
+          .mockup-section {
+            display: none;
+          }
+        }
+      }
     }
 
-    h2 {
-      font-size: 25px;
-      margin-top: 5px;
-    }
+    #subscription-section {
+      width: 100%;
+      background-color: white;
+      padding: 25px;
 
-    h3 {
-      padding: 10px 15px;
-      background-color: rgba(0, 0, 0, 0.3);
-      display: inline-block;
-      font-size: 20px;
-      //color: white;
-    }
+      > div {
+        width: 100%;
+        border: 3px dashed @secondaryColor;
+        padding: 20px 35px;
 
-    > img {
-      width: 200px;
-      height: 200px;
-    }
+        img {
+          width: 64px;
+        }
 
-    #btn-subscribe {
-      .black-btn();
+        h1 {
+          color: @primaryColor;
+          margin: 0;
+        }
+
+        p {
+          margin: 0 0 20px 0;
+          font-size: 17px;
+        }
+
+        button {
+          .black-btn();
+          background-color: @secondaryColor;
+
+          &:hover {
+            background-color: @secondaryColor;
+          }
+        }
+
+        @media screen and (max-width: 380px) {
+          button {
+            padding: 15px;
+            width: 100%;
+          }
+        }
+      }
     }
   }
 
   footer {
     background-color: @transparentWhiteBg;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 2px;
-    flex-direction: column;
-
-    a {
-      display: inline-block;
-      line-height: 0;
-    }
-
-    a {
-      img {
-        width: 25px;
-      }
-    }
-  }
-
-  nav {
-    background-color: @transparentWhiteBg;
-    /*display: flex;*/
-    display: none;
-    align-items: center;
-    padding: 20px 15px;
+    padding: 15px;
     color: white;
-
-    .title {
-      font-size: 20px;
-      font-weight: bold;
-    }
+    text-align: center;
   }
+
+
 }
 
 #layer {
