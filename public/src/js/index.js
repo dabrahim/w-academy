@@ -87,4 +87,12 @@ $(() => {
         $(layer_div).hide();
         $(wrapper_div).removeClass('blur');
     }
+
+    $(window).resize(updateBannerSize);
+
+    function updateBannerSize() {
+        $('#main-banner').css('height', $(window).height());
+    }
+
+    updateBannerSize();
 });
