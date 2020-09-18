@@ -6,15 +6,17 @@ $(() => {
     const subscribe_btn = $('#btn-subscribe');
     const submitForm_btn = $('#btn-submit-subscription-form');
     const subscription_form = $('#subscription-form');
-    const closeForm_btn = $('#subscription-form .close');
+    const close_btn = $('.close');
     const success_div = $('#subscription-form .success');
     const failure_div = $('#subscription-form .failure');
+    const successfulSubscriptionMessage_div = $('#successful-registration-message');
+    const recipientAddress_text = $('#recipient-address');
 
     $(subscribe_btn).on('click', () => {
-        showLayer();
+        showLayer(subscription_form);
     });
 
-    $(closeForm_btn).on('click', hideLayer);
+    $(close_btn).on('click', hideLayer);
 
     $(subscription_form).on('submit', e => {
         e.preventDefault();
@@ -29,7 +31,7 @@ $(() => {
             beforeSend() {
                 $(submitForm_btn).attr('disabled', true);
                 $(submitForm_btn).find('.loader').show();
-                hideSuccessMessage();
+                //hideSuccessMessage();
                 hideErrorMessage();
             },
             complete() {
@@ -39,7 +41,8 @@ $(() => {
             success(response) {
                 if (response.success) {
                     e.target.reset();
-                    showSuccessMessage(response.message);
+                    $(recipientAddress_text).text(formData.get('email'));
+                    switchVisibleChild(successfulSubscriptionMessage_div);
 
                 } else {
                     showErrorMessage(response.errors[0]);
@@ -51,12 +54,16 @@ $(() => {
         });
     });
 
-    function showSuccessMessage(message) {
-        $(success_div).text(message).show();
-    }
+    function switchVisibleChild(childToShow) {
+        $(layer_div).children()
+            .each((index, child) => {
+                if ($(child).is($(childToShow))) {
+                    $(child).show();
 
-    function hideSuccessMessage() {
-        $(success_div).text('').hide();
+                } else {
+                    $(child).hide();
+                }
+            });
     }
 
     function showErrorMessage(message) {
@@ -67,7 +74,11 @@ $(() => {
         $(failure_div).text('').hide();
     }
 
-    function showLayer() {
+    function showLayer(childToShow = null) {
+        if (childToShow !== null) {
+            switchVisibleChild(childToShow);
+        }
+
         $(wrapper_div).addClass('blur');
         $(layer_div).css('display', 'flex');
     }

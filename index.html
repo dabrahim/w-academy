@@ -86,16 +86,31 @@
                 <h1>Subscription</h1>
                 <p>Leave your email address and be notified of any update such as new e-books, youtube videos, and more
                     !</p>
-                <div class="success animate__animated animate__fadeIn"></div>
-                <div class="failure animate__animated animate__fadeIn"></div>
+                <div class="success animate__animated animate__shakeX"></div>
+                <div class="failure animate__animated animate__shakeX"></div>
                 <input type="text" name="firstname" placeholder="First Name"><br>
                 <input type="text" name="lastname" placeholder="Last Name"><br>
                 <input type="email" name="email" placeholder="Email"><br>
                 <button type="submit" id="btn-submit-subscription-form"><span>Subscribe</span> <img
                         src="/public/dist/gif/dual_ring.svg" alt="Loader" class="loader"></button>
 
-                <img src="/public/dist/icons/close-window-48.png" class="close" alt="close icon">
+                <img src="/public/dist/icons/close-window-48.png" class="close close-style" alt="close icon">
             </form>
+
+            <div id="successful-registration-message" class="animate__animated animate__bounceIn">
+                <h1>Check your email</h1>
+                <p>We’ve sent a message to <strong id="recipient-address"></strong> with a link to activate your account.
+                </p>
+                <p><strong>Didn't get an email?</strong></p>
+                <span>If you don’t see an email from us within a few minutes, a few things could have happened:</span>
+                <ul>
+                    <li>The email is in your spam folder.</li>
+                    <li>The email address you entered had a mistake or typo.</li>
+                    <li>You accidentally gave us another email address.</li>
+                    <li>We can’t deliver the email to this address.</li>
+                </ul>
+                <button class="close">Close</button>
+            </div>
 
         </div>
         <script src="public/dist/js/index.bundle.js" type="application/javascript"></script>

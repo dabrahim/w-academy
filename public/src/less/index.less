@@ -38,7 +38,7 @@ body {
 
     h2 {
       font-size: 25px;
-      margin-top: 5px ;
+      margin-top: 5px;
     }
 
     h3 {
@@ -90,6 +90,54 @@ body {
     .title {
       font-size: 20px;
       font-weight: bold;
+    }
+  }
+}
+
+#layer {
+
+  #successful-registration-message {
+    position: relative;
+    text-align: left;
+    background-color: rgba(255, 255, 255, 1);
+    border-radius: 10px;
+    padding: 0 30px;
+    //padding: 0 30px;
+    width: 90%;
+    max-width: 700px;
+
+    h1 {
+      color: @primaryColor;
+      margin-bottom: 5px;
+    }
+
+    button {
+      width: 100%;
+      padding: 10px;
+      font-size: 17px;
+      font-weight: bold;
+      color: white;
+      background-color: @primaryColor;
+      border: none;
+      border-radius: 5px;
+      margin-bottom: 15px;
+    }
+
+    h1 + p {
+      font-size: 18px;
+      margin: 0;
+    }
+
+    h1 + p + p {
+      color: @primaryColor;
+      margin: 25px 0 5px 0;
+      font-size: 17px;
+    }
+
+    ul {
+      list-style-type: square;
+      margin: 10px 0 10px 5px;
+      text-align: left;
     }
   }
 }
